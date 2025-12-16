@@ -14,8 +14,7 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # Telegram Bot Token - replace with your token
-TOKEN = os.getenv('BOT_TOKEN', '8588967117:AAFzbGHkera-SCT5U6udPVB8hkAVAJKKb3I
-')
+TOKEN = os.getenv('BOT_TOKEN', '8588967117:AAFzbGHkera-SCT5U6udPVB8hkAVAJKKb3I')
 
 # Set your webhook URL here (replace with your actual URL)
 WEBHOOK_URL = 'https://yourdomain.com'  # <-- CHANGE THIS before deploy
@@ -192,3 +191,4 @@ if __name__ == '__main__':
     print(f"Setting webhook to {WEBHOOK_URL}/hook ...")
     bot.set_webhook(WEBHOOK_URL + '/hook')
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', '5000')))
+
